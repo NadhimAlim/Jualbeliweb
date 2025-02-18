@@ -34,7 +34,7 @@ const Checkout = () => {
       <h2>Checkout - Transfer Bank BRI</h2>
       <p>Silakan transfer ke rekening berikut:</p>
       <h5>Bank BRI</h5>
-      <p>Nomor Rekening: <strong>1234-5678-9012-3456</strong></p>
+      <p>Nomor Rekening: <strong>6636-0102-8330-555</strong></p>
       <p>Atas Nama: <strong>Muhammad Nadhim Alim</strong></p>
 
       <Form.Group controlId="formFile" className="mb-3">
