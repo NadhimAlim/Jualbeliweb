@@ -42,6 +42,7 @@ import Marketplace from "./pages/Marketplace";
 import ProductDetail from "./pages/ProductDetail";
 import Checkout from "./pages/Checkout";
 import Download from "./pages/Download";
+import Komunitas from "./pages/Komunitas";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/download" element={<Download />} />
+            <Route path="/komunitas" element={<Komunitas />} /> 
           </Routes>
         </Container>
         <Footer /> {/* Tambahkan Footer di sini */}
