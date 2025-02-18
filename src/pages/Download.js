@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Container, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 
 const Download = () => {
-  const navigate = useNavigate();
   const [paymentStatus, setPaymentStatus] = useState("");
 
   useEffect(() => {
     const status = localStorage.getItem("paymentStatus");
     setPaymentStatus(status);
-    if (status !== "Lunas") {
-      alert("Pembayaran Anda belum dikonfirmasi oleh admin.");
-      navigate("/checkout");
-    }
-  }, [navigate]);
+  }, []);
 
   return (
-    <Container className="mt-5 text-center">
+    <Container className="text-center" style={{ marginTop: "100px" }}>
       <h2>Download Source Code</h2>
       {paymentStatus === "Lunas" ? (
         <>
@@ -26,7 +20,7 @@ const Download = () => {
           </Button>
         </>
       ) : (
-        <p>Menunggu konfirmasi pembayaran...</p>
+        <p>Silakan unggah bukti transfer di halaman Checkout untuk mendownload.</p>
       )}
     </Container>
   );

@@ -1,20 +1,3 @@
-// import React from "react";
-// import { Container, Button } from "react-bootstrap";
-// import { useParams, Link } from "react-router-dom";
-
-// const ProductDetail = () => {
-//   const { id } = useParams();
-//   return (
-//     <Container className="mt-5">
-//       <h2>Detail Produk {id}</h2>
-//       <p>Deskripsi lengkap tentang produk ini.</p>
-//       <Button variant="success" as={Link} to="/checkout">Beli Sekarang</Button>
-//     </Container>
-//   );
-// };
-
-// export default ProductDetail;
-
 import React from "react";
 import { Container, Button, Card } from "react-bootstrap";
 import { useParams, Link } from "react-router-dom";
@@ -25,21 +8,24 @@ const products = [
     title: "E-Commerce React",
     price: "Rp 200.000",
     description: "Template e-commerce modern dengan React dan Bootstrap.",
-    image: "/images/profil.png"
+    image: "/images/profil.png",
+    preview: "https://man4bantul.sch.id/" // Ganti dengan URL live preview asli
   },
   {
     id: 2,
     title: "Landing Page Bootstrap",
     price: "Rp 100.000",
     description: "Landing page profesional menggunakan Bootstrap 5.",
-    image: "/images/website-design.jpg"
+    image: "/images/website-design.jpg",
+    preview: "https://your-demo-url.com/landingpage"
   },
   {
     id: 3,
     title: "Admin Dashboard Vue",
     price: "Rp 250.000",
     description: "Dashboard admin responsif berbasis Vue.js dan Tailwind CSS.",
-    image: "/images/website.jpg"
+    image: "/images/website.jpg",
+    preview: "https://your-demo-url.com/admin-dashboard"
   }
 ];
 
@@ -49,7 +35,7 @@ const ProductDetail = () => {
 
   if (!product) {
     return (
-      <Container className="mt-5 text-center">
+      <Container className="text-center" style={{ marginTop: "80px" }}>
         <h2>Produk tidak ditemukan</h2>
         <Button variant="primary" as={Link} to="/marketplace">
           Kembali ke Marketplace
@@ -59,16 +45,23 @@ const ProductDetail = () => {
   }
 
   return (
-    <Container className="mt-5">
+    <Container style={{ marginTop: "80px" }}>
       <Card className="p-4">
         <Card.Img variant="top" src={product.image} alt={product.title} className="mb-3" />
         <Card.Body>
           <h2>{product.title}</h2>
           <h4 className="text-success">{product.price}</h4>
           <p>{product.description}</p>
+
           <Button variant="success" as={Link} to="/checkout">
             Beli Sekarang
           </Button>
+
+          {product.preview && (
+            <Button variant="info" href={product.preview} target="_blank" className="ms-2">
+              Live Preview
+            </Button>
+          )}
         </Card.Body>
       </Card>
     </Container>
@@ -76,3 +69,4 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
+

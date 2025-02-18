@@ -8,7 +8,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col md={6}>
-            <h5>Source Code Marketplace</h5>
+            <h5>NadhimCode</h5>
             <p>Tempat terbaik untuk membeli dan menjual source code website.</p>
           </Col>
           <Col md={3}>
@@ -22,14 +22,14 @@ const Footer = () => {
           <Col md={3}>
             <h5>Follow Kami</h5>
             <p>
-              <a href="https://facebook.com" className="text-light me-2">Facebook</a>
-              <a href="https://twitter.com" className="text-light me-2">Twitter</a>
+              <a href="https://facebook.com" className="text-light me-2">Github</a>
+              <a href="https://twitter.com" className="text-light me-2">Youtube</a>
               <a href="https://instagram.com" className="text-light">Instagram</a>
             </p>
           </Col>
         </Row>
         <hr />
-        <p className="text-center mb-0">© {new Date().getFullYear()} Source Code Marketplace. All rights reserved.</p>
+        <p className="text-center mb-0">© {new Date().getFullYear()} NadhimCode Marketplace. All rights reserved.</p>
       </Container>
     </footer>
   );

@@ -13,7 +13,7 @@ const Marketplace = () => {
   ];
 
   return (
-    <Container className="mt-5">
+    <Container  style={{ marginTop: "80px" }}>
       <h2>Marketplace</h2>
       <Row>
         {products.map((product) => (
